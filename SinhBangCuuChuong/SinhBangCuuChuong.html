@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinh Bảng Cửu Chương</title>
+</head>
+<body style="display:flex; justify-content: center; align-items: center;">
+    <div id="row" style="display: flex; flex-direction: column;"></div>
+
+    <script>
+        let content = '';
+        for (let i = 1; i <= 9; i++) {
+            content += `<div style="display: flex;">`;
+            for (let j = 2; j <= 9; j++) {
+                content += `<div style="width: 100px; height: 30px; border: 1px solid black; display:flex; justify-content: center; align-items: center; ">${j} x ${i} = ${i*j}</div>`;
+            }
+            content += '</div>';
+        }
+        document.getElementById("row").innerHTML = content;
+    </script>
+</body>
+</html>
